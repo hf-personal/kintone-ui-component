@@ -31,3 +31,7 @@ jobs:
         run: |
           node traffic-logs-kuc.min.js --config ./config.json
         working-directory: logs
+      - name: print log
+        run: |
+          cat ./log/system_20231120.log
+        working-directory: logs
