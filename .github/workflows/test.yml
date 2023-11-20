@@ -28,8 +28,8 @@ jobs:
       - name: check github api
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-        run:  
-          - gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/OWNER/REPO/traffic/views
+        run: |
+          gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/OWNER/REPO/traffic/views
         working-directory: logs
       - name: check release info
         env:
