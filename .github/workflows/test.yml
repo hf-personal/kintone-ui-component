@@ -23,14 +23,11 @@ jobs:
           REPO_INFO=$(curl -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             https://api.github.com/repos/${{ github.repository }})
           echo "$REPO_INFO"
-      - name: Install GitHub CLI
-        run: |
-          sudo apt update
-          sudo apt install gh
       - name: check github api
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
+          gh -version
           gh api -H "Accept: application/vnd.github+json" /repos/hf-personal/kitone-ui-component/traffic/views
         working-directory: logs
       - name: check release info
