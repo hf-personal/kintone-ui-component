@@ -27,8 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
-          gh -version
-          gh api -H "Accept: application/vnd.github+json" /repos/hf-personal/kitone-ui-component/traffic/views
+          gh api /repos/hf-personal/kitone-ui-component/traffic/views
         working-directory: logs
       - name: check release info
         env:
