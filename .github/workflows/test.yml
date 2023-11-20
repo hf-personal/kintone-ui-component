@@ -25,6 +25,12 @@ jobs:
           REPO_INFO=$(curl -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             https://api.github.com/repos/${{ github.repository }})
           echo "$REPO_INFO"
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+          sudo apt-add-repository -y https://cli.github.com/packages
+          sudo apt-get update
+          sudo apt-get install gh
       - name: check github api
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
