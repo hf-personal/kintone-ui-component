@@ -23,11 +23,7 @@ jobs:
           REPO_INFO=$(curl -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             https://api.github.com/repos/${{ github.repository }})
           echo "$REPO_INFO"
-      - name: check github api
-        env:
-          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
-        run: |
-          gh api -H "Accept: application/vnd.github+json" /repos/hf-personal/kitone-ui-component/traffic/views
+      
       - name: check release info
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
