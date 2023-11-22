@@ -32,5 +32,5 @@ jobs:
         working-directory: logs
       - name: print log
         run: |
-          cat ./log/system_20231120.log
+          cat ./log/system_20231121.log
         working-directory: logs
