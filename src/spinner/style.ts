@@ -3,8 +3,11 @@ export const SPINNER_CSS = `
   kuc-spinner *,
   kuc-spinner:lang(en),
   kuc-spinner:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial,
-      "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-spinner:lang(es),
+  kuc-spinner:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-spinner:lang(ja),
   kuc-spinner:lang(ja) * {

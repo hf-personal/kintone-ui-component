@@ -8,7 +8,7 @@ sidebar_label: Dialog
 
 Dialog は、ダイアログボックスを表示します。
 
-import { DialogComponent } from "@site/static/js/samples/desktop/dialog.js"
+import { DialogComponent } from "@site/static/js/samples/desktop/dialog.jsx"
 
 <DialogComponent />
 
@@ -46,7 +46,7 @@ Dialog(options)<br/>
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含むオブジェクト | |
+| options | object | \{\} | コンポーネントのプロパティを含むオブジェクト | |
 
 ---
 ### Method

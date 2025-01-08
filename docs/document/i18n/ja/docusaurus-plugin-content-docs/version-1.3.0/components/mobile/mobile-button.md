@@ -8,7 +8,7 @@ sidebar_label: MobileButton
 
 MobileButton は、ボタンを表示します。
 
-import { MobileButtonComponent } from "@site/static/js/samples/mobile/button.js"
+import { MobileButtonComponent } from "@site/static/js/samples/mobile/button.jsx"
 
 <MobileButtonComponent />
 
@@ -46,7 +46,7 @@ MobileButton(options)<br/>
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含むオブジェクト | |
+| options | object | \{\} | コンポーネントのプロパティを含むオブジェクト | |
 
 ---
 

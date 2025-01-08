@@ -3,8 +3,11 @@ export const DIALOG_CSS = `
   kuc-dialog *,
   kuc-dialog:lang(en),
   kuc-dialog:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial,
-      "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-dialog:lang(es),
+  kuc-dialog:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-dialog:lang(ja),
   kuc-dialog:lang(ja) * {
@@ -111,6 +114,10 @@ export const DIALOG_CSS = `
     padding: 24px;
     overflow-wrap: anywhere;
     word-break: normal;
+  }
+
+  .kuc-dialog__dialog__footer[hidden] {
+    display: none;
   }
 
   .kuc-dialog__mask {

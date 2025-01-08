@@ -3,8 +3,11 @@ export const READ_ONLY_TABLE_CSS = `
   kuc-readonly-table  *,
   kuc-readonly-table:lang(en),
   kuc-readonly-table:lang(en) * {
-      font-family: "HelveticaNeueW02-45Ligh", Arial,
-      "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-readonly-table:lang(es),
+  kuc-readonly-table:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-readonly-table:lang(ja),
   kuc-readonly-table:lang(ja) * {
@@ -72,11 +75,10 @@ export const READ_ONLY_TABLE_CSS = `
     vertical-align: top;
   }
   .kuc-readonly-table__table__body__row__cell-data {
-    overflow: auto;
     box-sizing: border-box;
     padding: 4px 8px;
     white-space: pre-wrap;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     border-color: #e3e7e8;
     border-style: solid;
     border-width: 1px;

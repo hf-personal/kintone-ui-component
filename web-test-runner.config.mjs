@@ -1,6 +1,9 @@
-import { defaultReporter } from "@web/test-runner";
+import { chromeLauncher, defaultReporter } from "@web/test-runner";
 export default {
-  nodeResolve: { mainFields: ["module", "main", "browser"] },
+  nodeResolve: {
+    mainFields: ["module", "main", "browser"],
+    exportConditions: ["production"],
+  },
   files: "./unit_test/**/test/*.test.js",
   coverage: true,
   reporters: [
@@ -14,4 +17,13 @@ export default {
       lines: 90,
     },
   },
+  browsers: [
+    chromeLauncher({
+      createPage: async ({ context }) => {
+        const page = await (await context.browser().createBrowserContext()).newPage();
+        await page.bringToFront();
+        return page;
+      },
+    }),
+  ],
 };

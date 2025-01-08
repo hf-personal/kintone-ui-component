@@ -8,7 +8,7 @@ sidebar_label: DateTimePicker
 
 DateTimePicker は日付と時間それぞれの入力エリアと選択肢を表示します。
 
-import { DateTimePickerComponent } from "@site/static/js/samples/desktop/datetime-picker.js"
+import { DateTimePickerComponent } from "@site/static/js/samples/desktop/datetime-picker.jsx"
 
 <DateTimePickerComponent />
 
@@ -55,7 +55,7 @@ DateTimePicker(options)<br/>
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | コンポーネントのプロパティを含むオブジェクト |  |
+| options  | object | \{\} | コンポーネントのプロパティを含むオブジェクト |  |
 
 ---
 ## Sample Code

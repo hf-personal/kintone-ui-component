@@ -8,7 +8,7 @@ sidebar_label: MobileButton
 
 The MobileButton component allows the user to create and displays buttons.
 
-import { MobileButtonComponent } from "@site/static/js/samples/mobile/button.js"
+import { MobileButtonComponent } from "@site/static/js/samples/mobile/button.jsx"
 
 <MobileButtonComponent />
 
@@ -51,14 +51,14 @@ Here is a list of available constructors:
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties |  |
+| options | object | \{\} | Object that includes component properties |  |
 
 ---
 
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

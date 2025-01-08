@@ -9,7 +9,7 @@
 
 <p align="center">
 kintone UI Component は、kintone カスタマイズ、プラグインのUI 開発を支援するための UI Component ライブラリです。<br />
-<strong>ドキュメントページは<a href="https://kintone-ui-component.netlify.app/ja/" rel="noopener" target="_blank">こちら</a>をご確認ください。</strong>
+<strong>ドキュメントページは<a href="https://ui-component.kintone.dev/ja/" rel="noopener" target="_blank">こちら</a>をご確認ください。</strong>
 </p>
 
 <p align="center">
@@ -17,9 +17,9 @@ kintone UI Component は、kintone カスタマイズ、プラグインのUI 開
 </p>
 
 - [インストール](#インストール)
-  - [UMD](#umd)
-  - [CDN](#cdn)
+  - [kuc.min.js をダウンロードして利用する](#kucminjs-をダウンロードして利用する)
   - [npm](#npm)
+  - [CDN](#cdn)
 - [使い方](#使い方)
 - [ブラウザサポート](#ブラウザサポート)
 - [v0の使い方](#v0の使い方)
@@ -29,35 +29,35 @@ kintone UI Component は、kintone カスタマイズ、プラグインのUI 開
 - [ライセンス](#ライセンス)
 
 ## インストール
-kintone UI Component は UMD, CDN, npm パッケージから使用可能です。
+kintone UI Component は、ダウンロードした kuc.min.js ファイル、npm パッケージ、または CDN として利用可能です。
 
-### UMD
+### kuc.min.js をダウンロードして利用する
 [各バージョン Release 欄](https://github.com/kintone-labs/kintone-ui-component/releases)の添付のアーカイブフォルダを解凍し、`kuc.min.js`を使用してください。
 ```
 ./umd/kuc.min.js
 ```
-
-### CDN
-こちらの CDN をご利用ください。
-
-- 最新版の kintone UI Component を読み込みたい場合
-  ```
-  https://unpkg.com/kintone-ui-component/umd/kuc.min.js
-  ```
-
-- バージョン指定して読み込みたい場合（プロジェクト名の後ろにバージョン番号を指定）
-  ```
-  https://unpkg.com/kintone-ui-component@1.0.0/umd/kuc.min.js
-  ```
-
-> unpkg はサイボウズが提供している CDN サービスではありません。検証用として利用することをお勧めします。<br />
-> 本番環境では、unpkg の障害や不具合による影響を避けるため、UMD の kuc.min.js をご利用ください。
 
 ### npm
 npm で `kintone-ui-component` をインストールしてご利用ください。
 ```bash
 npm install kintone-ui-component
 ```
+
+### CDN
+こちらの CDN をご利用ください。
+
+- バージョン指定して読み込みたい場合（プロジェクト名の後ろにバージョン番号を指定）
+  ```
+  https://unpkg.com/kintone-ui-component@1.0.0/umd/kuc.min.js
+  ```
+
+- 最新版の kintone UI Component を読み込みたい場合
+  ```
+  https://unpkg.com/kintone-ui-component/umd/kuc.min.js
+  ```
+
+> unpkg はサイボウズが提供している CDN サービスではありません。検証用としてお使いいただくことをお勧めします。<br/>
+> 本番環境では、unpkg の障害や不具合による影響を避けるため、GitHub から [kuc.min.js ファイルをダウンロード](#kucminjs-をダウンロードして利用する)してご利用ください。
 
 ## 使い方
 
@@ -86,7 +86,7 @@ text.addEventListener("change", event => {
 > グローバルオブジェクトとして Kuc を使うこともできますが、2つ以上の kuc.min.js を kintone カスタマイズやプラグインに読み込む場合はバージョンコンフリクトが起きる可能性があるのでご注意ください。この際、Kuc オブジェクトは最後に読み込まれた kuc.min.js を参照します。<br>
 > システム上に kuc.min.js が 1つしかない、もしくは最後に読み込まれた kuc.min.js の利用で問題ない場合は、Kuc オブジェクトを利用いただいて問題ありません。以下の `const Kuc = Kucs['1.x.x'];` の行を削除してください。<br>
 > v1.3.2 以前のバージョンを利用する場合は、Kuc をグローバルオブジェクトとして使ってください。2つ以上の kuc.min.js を kintone カスタマイズやプラグインに追加すると、バージョンコンフリクト問題が起きるのでご注意ください。
-> 詳しくは、[Quick Start](https://kintone-ui-component.netlify.app/ja/docs/getting-started/quick-start#installation) と [Version conflicts issue and solution](https://kintone-ui-component.netlify.app/ja/docs/guides/version-conflicts-issue-solution) 記事をご確認ください。
+> 詳しくは、[Quick Start](https://ui-component.kintone.dev/ja/docs/getting-started/quick-start#installation) と [Version conflicts issue and solution](https://ui-component.kintone.dev/ja/docs/guides/version-conflicts-issue-solution) 記事をご確認ください。
 
 ## ブラウザサポート
 
@@ -108,18 +108,13 @@ text.addEventListener("change", event => {
 > 各対応ブラウザ最新版での動作を確認しております。
 
 ## v0の使い方
-kintone UI Component v0 を使用する場合は、こちらのリンクをご確認ください。
-- [GitHub リポジトリ](https://github.com/kintone-labs/kintone-ui-component/tree/v0_dev)
-- [ドキュメントサイト](https://kintone-labs.github.io/kintone-ui-component/latest)
-
-> kintone UI Component v1 リリースに伴い、v0 については主に不具合改修とライブラリアップデートを継続します。<br>
-> 新規の機能開発は現在予定しておりません。
+:warning::warning: kintone UI Component v0 は、2023年12月31日にメンテナンスを終了しました。[kintone UI Component v1](https://github.com/kintone-labs/kintone-ui-component) への移行を推奨します。 :warning::warning:
 
 ## 移行ガイド
 v0 と v1 の仕様とインターフェースには違いがあるので、更新時には十分な確認をしてください。<br />
 詳細は下記の記事をご参照ください。
-- [A commentary on the difference between v0 and v1](https://kintone-ui-component.netlify.app/ja/docs/guides/comparison-v0-v1)
-- [v1.0.0 Release Notes](https://kintone-ui-component.netlify.app/ja/docs/releases/release-notes-v1.0.0)
+- [A commentary on the difference between v0 and v1](https://ui-component.kintone.dev/ja/docs/guides/comparison-v0-v1)
+- [v1.0.0 Release Notes](https://ui-component.kintone.dev/ja/docs/releases/release-notes-v1.0.0)
 
 > v0 で提供していた React 版については、現在 v1 では対応を見送っています。
 

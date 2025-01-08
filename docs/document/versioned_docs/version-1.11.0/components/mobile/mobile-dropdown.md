@@ -8,7 +8,7 @@ sidebar_label: MobileDropdown
 
 The MobileDropdown component allows the user to select one out of several options.
 
-import { MobileDropdownComponent } from "@site/static/js/samples/mobile/dropdown.js"
+import { MobileDropdownComponent } from "@site/static/js/samples/mobile/dropdown.jsx"
 
 <MobileDropdownComponent />
 
@@ -31,7 +31,7 @@ Here is a list of properties that can be used for modifying the component:
 | disabled | boolean | false | Enable/Disable the component from selecting | |
 | requiredIcon | boolean | false | Show/Hide the required icon | |
 | visible | boolean | true | Show/Hide the component | |
-| items | Array<Item\> | []  | List of options to display | Will result an error if the value of `items` is not an array |
+| items | Array\<Item\> | []  | List of options to display | Will result an error if the value of `items` is not an array |
 | Item.label | string | null | Text for each option | If `Item.label` is unspecified, the value of `Item.value` is displayed on the UI |
 | Item.value | string | null | Value of each option | Can set duplicated value in `Item.value` |
 
@@ -65,14 +65,14 @@ Here is a list of available constructors:
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties |  |
+| options | object | \{\} | Object that includes component properties |  |
 
 ---
 
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

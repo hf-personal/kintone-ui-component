@@ -8,7 +8,7 @@ sidebar_label: DatePicker
 
 The DatePicker component allows the user to display a input area and date selection calendar.
 
-import { DatePickerComponent } from "@site/static/js/samples/desktop/date-picker.js"
+import { DatePickerComponent } from "@site/static/js/samples/desktop/date-picker.jsx"
 
 <DatePickerComponent />
 
@@ -54,7 +54,7 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | Object that includes component properties |  |
+| options  | object | \{\} | Object that includes component properties |  |
 
 ### Custom CSS
 :::tip

@@ -8,7 +8,7 @@ sidebar_label: TextArea
 
 The TextArea component allows the user to display multiple lines of text element.
 
-import { TextAreaComponent } from "@site/static/js/samples/desktop/textarea.js"
+import { TextAreaComponent } from "@site/static/js/samples/desktop/textarea.jsx"
 
 <TextAreaComponent />
 
@@ -50,13 +50,13 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties |  |
+| options | object | \{\} | Object that includes component properties |  |
 
 ---
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

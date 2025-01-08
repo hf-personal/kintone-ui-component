@@ -8,7 +8,7 @@ sidebar_label: DateTimePicker
 
 The DateTimePicker component allows the user to display a input area of time & date and each selection part.
 
-import { DateTimePickerComponent } from "@site/static/js/samples/desktop/datetime-picker.js"
+import { DateTimePickerComponent } from "@site/static/js/samples/desktop/datetime-picker.jsx"
 
 <DateTimePickerComponent />
 
@@ -58,7 +58,7 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | Object that includes component properties |  |
+| options  | object | \{\} | Object that includes component properties |  |
 
 ### Custom CSS
 > Please check [Custom CSS feature guide](../../getting-started/custom-css.md) at first.
@@ -77,7 +77,7 @@ Here is a list of properties that can be used for modifying component style:
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

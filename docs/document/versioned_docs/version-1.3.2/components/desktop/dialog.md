@@ -8,7 +8,7 @@ sidebar_label: Dialog
 
 The Dialog component displays a dialog box.
 
-import { DialogComponent } from "@site/static/js/samples/desktop/dialog.js"
+import { DialogComponent } from "@site/static/js/samples/desktop/dialog.jsx"
 
 <DialogComponent />
 
@@ -46,7 +46,7 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties | |
+| options | object | \{\} | Object that includes component properties | |
 
 ---
 ### Method

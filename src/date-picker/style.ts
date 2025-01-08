@@ -3,8 +3,7 @@ kuc-date-picker,
 kuc-date-picker *,
 kuc-date-picker:lang(en),
 kuc-date-picker:lang(en) * {
-  font-family: "HelveticaNeueW02-45Ligh", Arial,
-    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: sans-serif;
 }
 kuc-date-picker:lang(ja),
 kuc-date-picker:lang(ja) * {
@@ -20,6 +19,10 @@ kuc-date-picker:lang(zh-TW),
 kuc-date-picker:lang(zh-TW) * {
   font-family: "微軟正黑體","Microsoft JhengHei","新宋体",NSimSun,STHeiti,
     Hei,"Heiti SC"
+}
+kuc-date-picker:lang(es),
+kuc-date-picker:lang(es) * {
+  font-family: sans-serif;
 }
 kuc-date-picker {
   font-size: 14px;

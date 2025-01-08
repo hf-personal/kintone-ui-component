@@ -3,8 +3,7 @@ kuc-base-datetime-listbox,
 kuc-base-datetime-listbox *,
 kuc-base-datetime-listbox:lang(en),
 kuc-base-datetime-listbox:lang(en) * {
-  font-family: "HelveticaNeueW02-45Ligh", Arial,
-    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: sans-serif;
 }
 kuc-base-datetime-listbox:lang(ja),
 kuc-base-datetime-listbox:lang(ja) * {
@@ -20,6 +19,10 @@ kuc-base-datetime-listbox:lang(zh-TW),
 kuc-base-datetime-listbox:lang(zh-TW) * {
   font-family: "微軟正黑體","Microsoft JhengHei","新宋体",NSimSun,STHeiti,
     Hei,"Heiti SC"
+}
+kuc-base-datetime-listbox:lang(es),
+kuc-base-datetime-listbox:lang(es) * {
+  font-family: sans-serif;
 }
 .kuc-base-datetime-listbox__listbox {
   position: absolute;

@@ -7,7 +7,7 @@ sidebar_label: FieldGroup
 ## Overview
 FieldGroup は、コンテンツの開閉を切り替えることができます。
 
-import { FieldGroupComponent } from "@site/static/js/samples/desktop/field-group.js"
+import { FieldGroupComponent } from "@site/static/js/samples/desktop/field-group.jsx"
 
 <FieldGroupComponent />
 
@@ -50,7 +50,7 @@ FieldGroup(options)<br/>
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含むオブジェクト |  |
+| options | object | \{\} | コンポーネントのプロパティを含むオブジェクト |  |
 
 ## Sample Code
 

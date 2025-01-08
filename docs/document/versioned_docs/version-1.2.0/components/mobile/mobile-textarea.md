@@ -8,7 +8,7 @@ sidebar_label: MobileTextArea
 
 The MobileTextArea component allows the user to display multiple lines of text element.
 
-import { MobileTextAreaComponent } from "@site/static/js/samples/mobile/textarea.js"
+import { MobileTextAreaComponent } from "@site/static/js/samples/mobile/textarea.jsx"
 
 <MobileTextAreaComponent />
 
@@ -50,7 +50,7 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties |  |
+| options | object | \{\} | Object that includes component properties |  |
 
 ---
 ## Sample Code

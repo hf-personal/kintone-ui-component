@@ -47,10 +47,10 @@ The rendered components' tags and class names will include the version number.<b
 You may still use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in. In this case, the `Kuc` object refers to the last loaded `kuc.min.js` file.<br/>
 In case that there is only one `kuc.min.js` file in the Kintone system or there is no problem with using last loaded `kuc.min.js` file, you can use Kuc object. Please remove `const Kuc = Kucs['1.x.x'];` line.
 When using a version before v1.4.0, please use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in.<br/>
-Please read this [Version conflicts issue and solution](../guides/version-conflicts-issue-solution) article for more information!
+Please read this [Version conflicts issue and solution](../guides/version-conflicts-issue-solution.md) article for more information!
 :::
 
-1. Download the file located inside Kintone UI Component repository's [each version Release field](https://github.com/kintone-labs/kintone-ui-component/releases). Unzip the attached archives folder (kintone-ui-component-{version} .tgz). Upload the following file to the `JavaScript and CSS Customization` inside Kintone's app setting.
+1. Download the file located inside Kintone UI Component repository's [each version Release field](https://github.com/kintone-labs/kintone-ui-component/releases). Unzip the attached archives folder (kintone-ui-component-\{version\} .tgz). Upload the following file to the `JavaScript and CSS Customization` inside Kintone's app setting.
 
 ```bash
 ./umd/kuc.min.js
@@ -92,14 +92,14 @@ See the guidance and sample code at [Use UMD](#use-the-umd) section.
 Once the CDN is being imported to the app, you will have access to the global object of `Kuc`.
 
    - For the latest version of Kintone UI Component:
-    ```bash
-    https://unpkg.com/kintone-ui-component/umd/kuc.min.js
-    ```
+     ```bash
+     https://unpkg.com/kintone-ui-component/umd/kuc.min.js
+     ```
 
    - If you want to import a particular version, specify the version number after the project name.
-    ```bash
-    https://unpkg.com/kintone-ui-component@1.0.0/umd/kuc.min.js
-    ```
+     ```bash
+     https://unpkg.com/kintone-ui-component@1.0.0/umd/kuc.min.js
+     ```
 
 2. The following is the same as the UMD.
 :::tip
@@ -110,7 +110,7 @@ In the production environment, you can use the `kuc.min.js` of the UMD to avoid 
 ### Use the npm package
 :::tip
 When using on and after v1.4.0, rendered components' tags and class names will include the version number.<br/>
-Please read this [Version conflicts issue and solution](../guides/version-conflicts-issue-solution) article for more information! <br/>
+Please read this [Version conflicts issue and solution](../guides/version-conflicts-issue-solution.md) article for more information! <br/>
 :::
 
 1. Create a folder name `customization`, and move your root into the folder, then execute the following command:

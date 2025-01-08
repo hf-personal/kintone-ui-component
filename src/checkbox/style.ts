@@ -3,8 +3,11 @@ export const CHECKBOX_CSS = `
   kuc-checkbox *,
   kuc-checkbox:lang(en),
   kuc-checkbox:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial,
-      "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-checkbox:lang(es),
+  kuc-checkbox:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-checkbox:lang(ja),
   kuc-checkbox:lang(ja) * {
@@ -114,4 +117,5 @@ export const CHECKBOX_CSS = `
     white-space: nowrap;
     min-height: 24px;
     line-height: 1.2;
-  }`;
+  }
+  `;

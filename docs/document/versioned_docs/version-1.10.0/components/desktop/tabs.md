@@ -8,7 +8,7 @@ sidebar_label: Tabs
 
 The Tabs component allows the user to display multiple tabs that can switch displaying contents.
 
-import { TabsComponent } from "@site/static/js/samples/desktop/tabs.js"
+import { TabsComponent } from "@site/static/js/samples/desktop/tabs.jsx"
 
 <TabsComponent />
 
@@ -27,7 +27,7 @@ Here is a list of properties that can be used for modifying the component:
 | value | string | ""  | Selected value | <li>If the `value` is matched in the `items`, the tab will be displayed even if it’s disabled</li><li>The first visible tab will be displayed in the following cases:<ul><li>If the `value` is not matched in the `items`</li><li>If the `value` is matched in the `items`, but the tab is not visible</li></ul></li><li>Will result an error if the `value` is not string type</li> |
 | borderVisible | boolean | true  | Show/Hide the border surrounding the content | |
 | visible | boolean | true | Show/Hide the component | |
-| items | Array<[Item](#item)\> | [] | List of tabs to display | Will result an error if the value of `items` is not an array |
+| items | Array\<[Item](#item)\> | [] | List of tabs to display | Will result an error if the value of `items` is not an array |
 
 #### Item
 
@@ -56,13 +56,13 @@ Here is a list of available constructors:
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties | |
+| options | object | \{\} | Object that includes component properties | |
 
 ---
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

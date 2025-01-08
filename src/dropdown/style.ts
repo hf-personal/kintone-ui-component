@@ -3,8 +3,11 @@ export const DROPDOWN_CSS = `
   kuc-dropdown *,
   kuc-dropdown:lang(en),
   kuc-dropdown:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial,
-      "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-dropdown:lang(es),
+  kuc-dropdown:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-dropdown:lang(ja),
   kuc-dropdown:lang(ja) * {

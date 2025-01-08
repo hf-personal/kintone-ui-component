@@ -8,7 +8,7 @@ sidebar_label: TimePicker
 
 TimePicker は入力エリアと時間選択用のリストを表示します。
 
-import { TimePickerComponent } from "@site/static/js/samples/desktop/time-picker.js"
+import { TimePickerComponent } from "@site/static/js/samples/desktop/time-picker.jsx"
 
 <TimePickerComponent />
 
@@ -52,7 +52,7 @@ TimePicker(options)<br/>
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | コンポーネントのプロパティを含むオブジェクト |  |
+| options  | object | \{\} | コンポーネントのプロパティを含むオブジェクト |  |
 
 ### Custom CSS
 :::tip

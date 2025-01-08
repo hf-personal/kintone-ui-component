@@ -7,7 +7,7 @@ sidebar_label: Button
 ## Overview
 The Button component allows the user to create and display buttons.
 
-import { ButtonComponent } from "@site/static/js/samples/desktop/button.js"
+import { ButtonComponent } from "@site/static/js/samples/desktop/button.jsx"
 
 <ButtonComponent />
 
@@ -45,7 +45,7 @@ Here is a list of available constructors:
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties | |
+| options | object | \{\} | Object that includes component properties | |
 
 ### Custom CSS
 :::tip
@@ -70,7 +70,7 @@ Here is a list of properties that can be used for modifying component style:
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

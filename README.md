@@ -9,7 +9,7 @@
 <p align="center">
 kintone UI Component is UI Component for kintone customization.<br />
 It supports you to develop kintone customization and kintone plugin.<br />
-<strong>The document page is <a href="https://kintone-ui-component.netlify.app" rel="noopener" target="_blank">here. </a></strong>
+<strong>The document page is <a href="https://ui-component.kintone.dev" rel="noopener" target="_blank">here. </a></strong>
 </p>
 
 <p align="center">
@@ -17,9 +17,10 @@ It supports you to develop kintone customization and kintone plugin.<br />
 </p>
 
 - [Installation](#installation)
-  - [UMD](#umd)
-  - [CDN](#cdn)
+  - [Use with downloading kuc.min.js file](#use-with-downloading-kucminjs-file)
   - [npm](#npm)
+  - [CDN](#cdn)
+  
 - [Usage](#usage)
 - [Browser Support](#browser-support)
 - [v0 Usage](#v0-usage)
@@ -29,35 +30,34 @@ It supports you to develop kintone customization and kintone plugin.<br />
 - [License](#license)
 
 ## Installation
-kintone UI Component is available as UMD, CDN and npm package.
+Kintone UI Component is available as the downloaded `kuc.min.js` file, a npm package, or a CDN.
 
-### UMD
+### Use with downloading kuc.min.js file
 Please use `kuc.min.js` downloaded from [releases page](https://github.com/kintone-labs/kintone-ui-component/releases).
 ```
 ./umd/kuc.min.js
 ```
+### npm
+Please install and use `kintone-ui-component` with npm.
+```bash
+npm install kintone-ui-component
+```
 
 ### CDN
 Please use these CDN link.
-
-- If you want to load the latest version of kintone UI Component:
-  ```
-  https://unpkg.com/kintone-ui-component/umd/kuc.min.js
-  ```
 
 - If you want to specify the version and load it (specify the version number after the project name):
   ```
   https://unpkg.com/kintone-ui-component@1.0.0/umd/kuc.min.js
   ```
 
-> unpkg is not supported by Cybozu. We recommend you to use it for verification.<br />
-> In a production environment, please use UMD to avoid the possible effects of unpkg technical obstacle and glitches.
+- If you want to load the latest version of kintone UI Component:
+  ```
+  https://unpkg.com/kintone-ui-component/umd/kuc.min.js
+  ```
 
-### npm
-Please install and use `kintone-ui-component` with npm.
-```bash
-npm install kintone-ui-component
-```
+> unpkg is not a CDN service provided by Cybozu. It is recommended that you use this for verification.<br/>
+> In the production environment, you can [download the `kuc.min.js` file](#use-with-downloading-kucminjs-file) from GitHub and use it to avoid any failures and problems related to unpkg.
 
 ## Usage
 
@@ -87,7 +87,7 @@ text.addEventListener("change", event => {
 > You may still use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in. In this case, the `Kuc` object refers to the last loaded `kuc.min.js` file.<br>
 > In case that there is only one `kuc.min.js` file in the Kintone system or there is no problem with using last loaded `kuc.min.js` file, you can use Kuc object. Please remove `const Kuc = Kucs['1.x.x'];` line.
 > When using a version before v1.4.0, please use `Kuc` as a global variable but **note that it may be conflicting when adding two or more `kuc.min.js` files** on Kintone customization or plug-in.<br>
-> Please visit [Quick Start](https://kintone-ui-component.netlify.app/docs/getting-started/quick-start#installation) and [Version conflicts issue and solution](https://kintone-ui-component.netlify.app/docs/guides/version-conflicts-issue-solution) for more information!
+> Please visit [Quick Start](https://ui-component.kintone.dev/docs/getting-started/quick-start#installation) and [Version conflicts issue and solution](https://ui-component.kintone.dev/docs/guides/version-conflicts-issue-solution) for more information!
 
 ## Browser Support
 
@@ -109,19 +109,14 @@ text.addEventListener("change", event => {
 > We confirmed the operation with the latest version of each compatible browser.
 
 ## v0 Usage
-If you want to use kintone UI Component v0.x.x, please refer to these pages.
-- [GitHub repository](https://github.com/kintone-labs/kintone-ui-component/tree/v0_dev)
-- [Document page](https://kintone-labs.github.io/kintone-ui-component/latest)
-
-> With the release of kintone UI Component v1, we will continue to mainly fix bugs and update libraries for v0.<br />
-> We don't plan to develop new functions for now.
+:warning::warning: The maintenance of kintone UI Component v0 ended on 31 December 2023. We recommend migrating to [kintone UI Component v1](https://github.com/kintone-labs/kintone-ui-component). :warning::warning:
 
 ## Migration Guide
 There are differences in specifications and interfaces between v0 and v1.<br />
 Please be sure to verify enough when you updating.<br />
 For more details, please refer to the articles below.
-- [The difference of the way to code between v0 and v1](https://kintone-ui-component.netlify.app/docs/guides/comparison-v0-v1)
-- [v1.0.0 Release Notes](https://kintone-ui-component.netlify.app/docs/releases/release-notes-v1.0.0)
+- [The difference of the way to code between v0 and v1](https://ui-component.kintone.dev/docs/guides/comparison-v0-v1)
+- [v1.0.0 Release Notes](https://ui-component.kintone.dev/docs/releases/release-notes-v1.0.0)
 
 > About the React version provided in v0, we haven't supported it in v1 now.
 

@@ -8,7 +8,7 @@ sidebar_label: Notification
 
 The Notification component allows the user to display pop-up notifications.
 
-import { NotificationComponent } from "@site/static/js/samples/desktop/notification.js"
+import { NotificationComponent } from "@site/static/js/samples/desktop/notification.jsx"
 
 <NotificationComponent />
 
@@ -36,7 +36,7 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties |  |
+| options | object | \{\} | Object that includes component properties |  |
 
 ### Event
 

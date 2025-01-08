@@ -7,7 +7,10 @@ export const MOBILE_MULTICHOICE_CSS = `
       "ヒラギノ角ゴ ProN W3", "ＭＳ Ｐゴシック", "Lucida Grande",
       "Lucida Sans Unicode", Arial, Verdana, sans-serif;
   }
-
+  kuc-mobile-multi-choice:lang(es),
+  kuc-mobile-multi-choice:lang(es) * {
+    font-family: sans-serif;
+  }
   kuc-mobile-multi-choice:lang(zh),
   kuc-mobile-multi-choice:lang(zh) * {
     font-family: "微软雅黑", "Microsoft YaHei", "新宋体", NSimSun, STHeiti,
@@ -70,5 +73,23 @@ export const MOBILE_MULTICHOICE_CSS = `
     -webkit-text-fill-color: #999999;
     background-color: #d5d7d9;
     opacity: 1;
+  }
+
+  .kuc-mobile-multi-choice__input-form__select__input option:disabled {
+    color: #999999;
+    -webkit-text-fill-color: #999999;
+    background-color: #d5d7d9;
+    opacity: 1;
+  }
+
+  .kuc-mobile-multi-choice__input-form__select__input option:disabled[selected] {
+    background-color: #cecece; /* Chrome */
+    background-color: -moz-cellhighlight; /* Firefox */
+    opacity: 1;
+  }
+
+  .kuc-mobile-multi-choice__input-form__select__input:disabled option {
+    color: #999999;
+    -webkit-text-fill-color: #999999;
   }
 `;

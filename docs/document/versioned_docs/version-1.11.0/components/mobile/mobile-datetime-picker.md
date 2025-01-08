@@ -8,7 +8,7 @@ sidebar_label: MobileDateTimePicker
 
 The MobileDateTimePicker component allows the user to display a input area of time & date and each selection part.
 
-import { MobileDateTimePickerComponent } from "@site/static/js/samples/mobile/datetime-picker.js"
+import { MobileDateTimePickerComponent } from "@site/static/js/samples/mobile/datetime-picker.jsx"
 
 <MobileDateTimePickerComponent />
 
@@ -55,13 +55,13 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | Object that includes component properties |  |
+| options  | object | \{\} | Object that includes component properties |  |
 
 ---
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

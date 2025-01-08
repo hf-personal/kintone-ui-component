@@ -3,8 +3,7 @@ kuc-base-datetime-calendar-header,
 kuc-base-datetime-calendar-header *,
 kuc-base-datetime-calendar-header:lang(en),
 kuc-base-datetime-calendar-header:lang(en) * {
-  font-family: "HelveticaNeueW02-45Ligh", Arial,
-    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: sans-serif;
 }
 kuc-base-datetime-calendar-header:lang(ja),
 kuc-base-datetime-calendar-header:lang(ja) * {
@@ -21,6 +20,10 @@ kuc-base-datetime-calendar-header:lang(zh-TW),
 kuc-base-datetime-calendar-header:lang(zh-TW) * {
   font-family: "微軟正黑體","Microsoft JhengHei","新宋体",NSimSun,STHeiti,
     Hei,"Heiti SC",sans-serif;
+}
+kuc-base-datetime-calendar-header:lang(es),
+kuc-base-datetime-calendar-header:lang(es) * {
+  font-family: sans-serif;
 }
 kuc-base-datetime-calendar-header:lang(ja) kuc-base-datetime-listbox * {
   font-weight: 400;

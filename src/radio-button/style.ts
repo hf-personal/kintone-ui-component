@@ -3,8 +3,11 @@ export const RADIOBUTTON_CSS = `
   kuc-radio-button *,
   kuc-radio-button:lang(en),
   kuc-radio-button:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial,
-      "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-radio-button:lang(es),
+  kuc-radio-button:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-radio-button:lang(ja),
   kuc-radio-button:lang(ja) * {

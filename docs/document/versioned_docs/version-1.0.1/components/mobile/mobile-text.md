@@ -8,7 +8,7 @@ sidebar_label: MobileText
 
 The MobileText component allows the user to display a single line text element.
 
-import { MobileTextComponent } from "@site/static/js/samples/mobile/text.js"
+import { MobileTextComponent } from "@site/static/js/samples/mobile/text.jsx"
 
 <MobileTextComponent />
 
@@ -53,7 +53,7 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | Object that includes component properties |  |
+| options  | object | \{\} | Object that includes component properties |  |
 
 ---
 ## Sample Code

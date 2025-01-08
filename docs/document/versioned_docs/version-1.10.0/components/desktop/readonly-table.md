@@ -8,7 +8,7 @@ sidebar_label: ReadOnlyTable
 
 The ReadOnlyTable component allows the user to display a read-only mode table.
 
-import { ReadOnlyTableComponent } from "@site/static/js/samples/desktop/readonly-table.js"
+import { ReadOnlyTableComponent } from "@site/static/js/samples/desktop/readonly-table.jsx"
 
 <ReadOnlyTableComponent />
 
@@ -28,8 +28,8 @@ Here is a list of properties that can be used for modifying the component:
 | rowsPerPage | number | 5 | Number of table rows per page | Round off to the nearest whole number when the decimal point is set<br/>Will result an error if the value of `rowsPerPage` is not a positive integer |
 | pagination | boolean | true | Show/Hide the pagination | If setting `false`, pagination is hidden and all rows are displayed<br/>If setting `true`, pagination is displayed and only the number of rows set in `rowsPerPage` are displayed |
 | visible | boolean | true | Show/Hide the component | |
-| columns | Array<[Column](#column)\> | []  | Column data of the component | Will result an error if the value of `columns` is not an array |
-| data | Array<object\> | []  | Row data of the component | Will result an error if the value of `data` is not an array |
+| columns | Array\<[Column](#column)\> | []  | Column data of the component | Will result an error if the value of `columns` is not an array |
+| data | Array\<object\> | []  | Row data of the component | Will result an error if the value of `data` is not an array |
 
 #### Column
 | Name | Type | Default | Description | Remark |
@@ -46,13 +46,13 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties |  |
+| options | object | \{\} | Object that includes component properties |  |
 
 ---
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

@@ -7,6 +7,10 @@ export const MOBILE_CHECKBOX_CSS = `
       "ヒラギノ角ゴ ProN W3", "ＭＳ Ｐゴシック", "Lucida Grande",
       "Lucida Sans Unicode", Arial, Verdana, sans-serif;
   }
+  kuc-mobile-checkbox:lang(es),
+  kuc-mobile-checkbox:lang(es) * {
+    font-family: sans-serif;
+  }
   kuc-mobile-checkbox:lang(zh),
   kuc-mobile-checkbox:lang(zh) * {
     font-family: "微软雅黑", "Microsoft YaHei", "新宋体", NSimSun, STHeiti,
@@ -72,7 +76,8 @@ export const MOBILE_CHECKBOX_CSS = `
     border-style: solid;
     border-radius: 8px;
   }
-  .kuc-mobile-checkbox__group__select-menu[disabled] {
+  .kuc-mobile-checkbox__group__select-menu[disabled],
+  .kuc-mobile-checkbox__group__select-menu__item--disabled {
     background-color: #d5d7d9;
     color: #999999;
     -webkit-text-fill-color: #999999;
@@ -108,6 +113,16 @@ export const MOBILE_CHECKBOX_CSS = `
   }
   .kuc-mobile-checkbox__group__select-menu__item:last-child {
     border-bottom: 0px;
+  }
+  .kuc-mobile-checkbox__group__select-menu[bordervisible]
+  .kuc-mobile-checkbox__group__select-menu__item:first-child {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  .kuc-mobile-checkbox__group__select-menu[bordervisible]
+  .kuc-mobile-checkbox__group__select-menu__item:last-child {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
   }
   .kuc-mobile-checkbox__group__select-menu__item__input {
     position: absolute;

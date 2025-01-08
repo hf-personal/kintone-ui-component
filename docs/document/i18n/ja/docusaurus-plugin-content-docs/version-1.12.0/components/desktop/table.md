@@ -7,7 +7,7 @@ sidebar_label: Table
 ## Overview
 Table は編集可能なテーブルを表示します。
 
-import { TableComponent } from "@site/static/js/samples/desktop/table.js"
+import { TableComponent } from "@site/static/js/samples/desktop/table.jsx"
 
 <TableComponent />
 
@@ -27,8 +27,8 @@ import { TableComponent } from "@site/static/js/samples/desktop/table.js"
 | actionButton | boolean | true | 行追加/削除ボタンの表示/非表示設定 | |
 | headerVisible | boolean | true | ヘッダーの表示/非表示設定 | |
 | visible | boolean | true | コンポーネントの表示/非表示設定 | |
-| columns | Array<[Column](#column)\> | []  | コンポーネントの列データ | columns が配列以外の場合、エラーを出力する |
-| data | Array<object\> | []  | コンポーネントの行データ | data が配列以外の場合、エラーを出力する |
+| columns | Array\<[Column](#column)\> | []  | コンポーネントの列データ | columns が配列以外の場合、エラーを出力する |
+| data | Array\<object\> | []  | コンポーネントの行データ | data が配列以外の場合、エラーを出力する |
 
 #### Column
 | Name | Type | Default | Description | Remark |
@@ -57,7 +57,7 @@ Table(options)<br/>
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含むオブジェクト |  |
+| options | object | \{\} | コンポーネントのプロパティを含むオブジェクト |  |
 
 ---
 

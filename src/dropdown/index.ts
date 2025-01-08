@@ -80,17 +80,21 @@ let exportDropdown;
     private _errorEl!: HTMLDivElement;
 
     private _timeoutID!: number | null;
+    private _previousScrollTop!: number;
 
     private _GUID: string;
 
     private _DISABLED_CLASS =
       "kuc-dropdown__group__select-menu__item--disabled";
 
+    private _hasValueInItems = false;
+
     constructor(props?: DropdownProps) {
       super();
       this._GUID = generateGUID();
       const validProps = validateProps(props);
       this._handleClickDocument = this._handleClickDocument.bind(this);
+      this._handleScrollMenu = this._handleScrollMenu.bind(this);
       this._setInitialValue(validProps);
       Object.assign(this, validProps);
     }
@@ -156,9 +160,13 @@ let exportDropdown;
     }
 
     willUpdate(changedProperties: PropertyValues): void {
+      if (changedProperties.has("items") || changedProperties.has("value")) {
+        this._hasValueInItems = this.items.some(
+          (item) => item.value === this.value,
+        );
+      }
       if (changedProperties.has("value")) {
-        if (this.value !== "") return;
-
+        if (this.value !== "" || this._hasValueInItems) return;
         this.selectedIndex = -1;
       }
     }
@@ -180,7 +188,7 @@ let exportDropdown;
     }
 
     private _getSelectedIndex() {
-      if (!this.value) {
+      if (!this.value && !this._hasValueInItems) {
         if (this.items[this.selectedIndex]) return this.selectedIndex;
         return -1;
       }
@@ -276,6 +284,7 @@ let exportDropdown;
     async updated() {
       await this.updateComplete;
       if (this._selectorVisible) {
+        this._menuEl.addEventListener("scroll", this._handleScrollMenu);
         this._setMenuPosition();
         this._scrollToView();
         setTimeout(() => {
@@ -347,6 +356,10 @@ let exportDropdown;
         return;
       }
       this._actionHideMenu();
+    }
+
+    private _handleScrollMenu() {
+      this._previousScrollTop = this._menuEl.scrollTop;
     }
 
     private _handleKeyDownDropdownToggle(event: KeyboardEvent) {
@@ -619,11 +632,25 @@ let exportDropdown;
     private _setMenuPositionAboveOrBelow() {
       this._menuEl.style.height = "auto";
       this._menuEl.style.bottom = "auto";
-      this._menuEl.style.overflowY = "";
+      this._menuEl.style.overflowY = "scroll";
 
-      const menuHeight = this._menuEl.getBoundingClientRect().height;
+      this._menuEl.style.maxHeight = "none";
+      const menuHeightNoMaxHeight = this._menuEl.getBoundingClientRect().height;
+      this._menuEl.style.maxHeight =
+        "var(--kuc-dropdown-menu-max-height, none)";
+      const menuHeightWithMaxHeight =
+        this._menuEl.getBoundingClientRect().height;
+
       const distanceToggleButton = this._getDistanceToggleButton();
-      if (distanceToggleButton.toBottom >= menuHeight) return;
+      if (distanceToggleButton.toBottom >= menuHeightWithMaxHeight) {
+        if (menuHeightNoMaxHeight > menuHeightWithMaxHeight) {
+          this._previousScrollTop &&
+            (this._menuEl.scrollTop = this._previousScrollTop);
+        } else {
+          this._menuEl.style.overflowY = "";
+        }
+        return;
+      }
 
       if (distanceToggleButton.toBottom < distanceToggleButton.toTop) {
         // Above
@@ -633,14 +660,23 @@ let exportDropdown;
         this._menuEl.style.bottom = `${
           this._buttonEl.offsetHeight + errorHeight
         }px`;
-        if (distanceToggleButton.toTop >= menuHeight) return;
+        if (distanceToggleButton.toTop >= menuHeightWithMaxHeight) {
+          if (menuHeightNoMaxHeight > menuHeightWithMaxHeight) {
+            this._previousScrollTop &&
+              (this._menuEl.scrollTop = this._previousScrollTop);
+          } else {
+            this._menuEl.style.overflowY = "";
+          }
+          return;
+        }
         this._menuEl.style.height = `${distanceToggleButton.toTop}px`;
-        this._menuEl.style.overflowY = "scroll";
       } else {
         // Below
         this._menuEl.style.height = `${distanceToggleButton.toBottom}px`;
-        this._menuEl.style.overflowY = "scroll";
       }
+
+      this._previousScrollTop &&
+        (this._menuEl.scrollTop = this._previousScrollTop);
     }
 
     private _setMenuPositionLeftOrRight() {

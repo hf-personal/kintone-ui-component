@@ -5,6 +5,7 @@ import { MultiChoice } from "../multichoice";
 import { RadioButton } from "../radio-button";
 import { TextArea } from "../textarea";
 import { TimePicker } from "../time-picker";
+import "../tooltip";
 
 import { Table } from "./index.ts";
 
@@ -18,6 +19,7 @@ export default {
     columns: { name: "columns" },
     headerVisible: { name: "headerVisible" },
     visible: { name: "visible" },
+    actionButton: { name: "actionButton" },
   },
   parameters: {
     actions: {
@@ -113,7 +115,8 @@ const Template = (args) => {
 // So please don't edit columns value on controls tab.
 const columns = [
   {
-    title: "Name",
+    title:
+      "<kuc-tooltip title='Please select a user' container='Name column (Dropdown component)'>",
     field: "name",
     requiredIcon: true,
     render: renderName,
@@ -180,5 +183,5 @@ Base.args = {
   data: data,
   id: "table-id",
   className: "table-classname",
-  actionButton: true,
+  actionButton: { add: true, remove: true },
 };

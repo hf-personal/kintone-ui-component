@@ -8,7 +8,7 @@ sidebar_label: Button
 
 Button は、ボタンを表示します。
 
-import { ButtonComponent } from "@site/static/js/samples/desktop/button.js"
+import { ButtonComponent } from "@site/static/js/samples/desktop/button.jsx"
 
 <ButtonComponent />
 
@@ -46,7 +46,7 @@ Button(options)<br/>
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | コンポーネントのプロパティを含むオブジェクト | |
+| options | object | \{\} | コンポーネントのプロパティを含むオブジェクト | |
 
 ---
 

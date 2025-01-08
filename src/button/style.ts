@@ -3,8 +3,11 @@ export const BUTTON_CSS = `
   kuc-button *,
   kuc-button:lang(en),
   kuc-button:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial, "Hiragino Kaku Gothic ProN",
-      Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-button:lang(es),
+  kuc-button:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-button:lang(ja),
   kuc-button:lang(ja) * {
@@ -100,7 +103,7 @@ export const BUTTON_CSS = `
     background-color: #d4d7d7;
     border: 1px solid #e3e7e8;
     color: #888888;
-    cursor: default;
+    cursor: not-allowed;
   }
   .kuc-button__button--normal:focus-visible,
   .kuc-button__button--submit:focus-visible,

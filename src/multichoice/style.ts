@@ -3,8 +3,11 @@ export const MULTICHOICE_CSS = `
   kuc-multi-choice *,
   kuc-multi-choice:lang(en),
   kuc-multi-choice:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial,
-      "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
+  }
+  kuc-multi-choice:lang(es),
+  kuc-multi-choice:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-multi-choice:lang(ja),
   kuc-multi-choice:lang(ja) * {

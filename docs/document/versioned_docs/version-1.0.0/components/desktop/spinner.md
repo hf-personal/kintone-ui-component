@@ -8,7 +8,7 @@ sidebar_label: Spinner
 
 The Spinner component allows the user to display a rolling spinner.
 
-import { SpinnerComponent } from "@site/static/js/samples/desktop/spinner.js"
+import { SpinnerComponent } from "@site/static/js/samples/desktop/spinner.jsx"
 
 <SpinnerComponent />
 
@@ -36,7 +36,7 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options | object | {} | Object that includes component properties |  |
+| options | object | \{\} | Object that includes component properties |  |
 
 ### Method
 Here is a list of available methods:

@@ -8,7 +8,7 @@ sidebar_label: MobileDatePicker
 
 The MobileDatePicker component allows the user to display a input area and date selection calendar.
 
-import { MobileDatePickerComponent } from "@site/static/js/samples/mobile/date-picker.js"
+import { MobileDatePickerComponent } from "@site/static/js/samples/mobile/date-picker.jsx"
 
 <MobileDatePickerComponent />
 
@@ -55,14 +55,14 @@ Here is a list of available constructors:
 
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | Object that includes component properties |  |
+| options  | object | \{\} | Object that includes component properties |  |
 
 ---
 
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

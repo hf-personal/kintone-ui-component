@@ -3,8 +3,7 @@ export const ATTACHMENT_CSS = `
   kuc-attachment *,
   kuc-attachment:lang(en),
   kuc-attachment:lang(en) * {
-    font-family: "HelveticaNeueW02-45Ligh", Arial,
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: sans-serif;
   }
   kuc-attachment:lang(ja),
   kuc-attachment:lang(ja) * {
@@ -20,6 +19,10 @@ export const ATTACHMENT_CSS = `
   kuc-attachment:lang(zh-TW) * {
     font-family: "微軟正黑體","Microsoft JhengHei","新宋体",NSimSun,STHeiti,
         Hei,"Heiti SC",sans-serif;
+  }
+  kuc-attachment:lang(es),
+  kuc-attachment:lang(es) * {
+    font-family: sans-serif;
   }
   kuc-attachment {
     font-size: 14px;
@@ -59,6 +62,9 @@ export const ATTACHMENT_CSS = `
     width: var(--kuc-attachment-width, auto);
     height: var(--kuc-attachment-height, auto);
   }
+  .kuc-attachment__group__files--disabled {
+    cursor: not-allowed;
+  }
   .kuc-attachment__group__files__browse-button {
     border: 1px solid transparent;
     position: relative;
@@ -68,7 +74,7 @@ export const ATTACHMENT_CSS = `
     text-decoration: none;
   }
   .kuc-attachment__group__files__browse-button[hidden]{
-    display: none
+    display: none;
   }
   .kuc-attachment__group__files__browse-button:focus-within {
     border: 1px solid #3498db;
@@ -204,5 +210,8 @@ export const ATTACHMENT_CSS = `
   }
   .kuc-attachment__group__files__browse-message[hidden] {
     display: none;
+  }
+  .kuc-attachment__group__files__not-droppable--dragenter {
+    visibility: hidden;
   }
 `;

@@ -7,9 +7,11 @@ import {
   ONE_KB,
   ONE_MB,
 } from "../base/attachment/resource/constant";
-import { en, ja, zh, zh_TW } from "../base/attachment/resource/locale";
+import { en, es, ja, zh, zh_TW } from "../base/attachment/resource/locale";
 import { ERROR_MESSAGE } from "../base/constant";
 import { languagePropConverter, visiblePropConverter } from "../base/converter";
+import "../base/error";
+import "../base/label";
 import {
   createStyleOnHeader,
   dispatchCustomEvent,
@@ -121,14 +123,16 @@ let exportAttachment;
           ></kuc-base-label>
         </label>
         <div
-          class="kuc-attachment__group__files"
+          class="kuc-attachment__group__files ${
+            this.disabled ? " kuc-attachment__group__files--disabled" : ""
+          }"
           @dragenter="${this._handleDragEnter}"
           @dragover="${this._handleDragOver}"
           @dragleave="${this._handleDragLeave}"
+          @drop="${this._handleDragDrop}"
         >
           <div
             class="kuc-attachment__group__files__droppable"
-            @drop="${this._handleDragDrop}"
             ?hidden="${!this._isDraging}"
           >
           <div class="kuc-attachment__group__files__droppable__text">${
@@ -136,15 +140,14 @@ let exportAttachment;
           }</div>
           </div>
           <ul
-            class="kuc-attachment__group__files__display-area"
-            ?hidden="${this._isDraging}"
+            class="kuc-attachment__group__files__display-area${this._isDraging ? " kuc-attachment__group__files__not-droppable--dragenter" : ""}"
           >
           ${this.files.map((item, number) =>
             this._getAttachmentItemTemplate(item, number),
           )}
           </ul>
-          <div class="kuc-attachment__group__files__browse-button"
-          ?hidden="${this._isDraging || this.disabled}">
+          <div class="kuc-attachment__group__files__browse-button${this._isDraging ? " kuc-attachment__group__files__not-droppable--dragenter" : ""}"
+          ?hidden="${this.disabled}">
             <span class="kuc-attachment__group__files__browse-button__text">${
               this._locale.ATTACHMENT_BROWSE
             }</span>
@@ -241,7 +244,7 @@ let exportAttachment;
       </svg>`;
     }
     private _getLanguage() {
-      const langs = ["en", "ja", "zh", "zh-TW"];
+      const langs = ["en", "ja", "zh", "zh-TW", "es"];
       if (langs.indexOf(this.language) !== -1) return this.language;
 
       if (langs.indexOf(document.documentElement.lang) !== -1)
@@ -261,6 +264,8 @@ let exportAttachment;
           return zh_TW;
         case "ja":
           return ja;
+        case "es":
+          return es;
         default:
           return en;
       }
@@ -325,7 +330,7 @@ let exportAttachment;
     }
 
     private _handleDragDrop(event: DragEvent) {
-      if (this.disabled) return;
+      if (this.disabled || !this._isDraging) return;
       event.preventDefault();
       this._handleDragLeave();
       if (this._isFileDrop(event)) {

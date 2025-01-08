@@ -8,7 +8,7 @@ sidebar_label: MobileTimePicker
 
 The MobileTimePicker component allows the user to display a input area and time selection listbox.
 
-import { MobileTimePickerComponent } from "@site/static/js/samples/mobile/time-picker.js"
+import { MobileTimePickerComponent } from "@site/static/js/samples/mobile/time-picker.jsx"
 
 <MobileTimePickerComponent />
 
@@ -49,14 +49,14 @@ Here is a list of available constructors:
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | Object that includes component properties |  |
+| options  | object | \{\} | Object that includes component properties |  |
 
 ---
 
 ## Sample Code
 
 :::tip
-Please check the [package installation](../../getting-started/quick-start#installation) method first.
+Please check the [package installation](../../getting-started/quick-start.md#installation) method first.
 :::
 
 Here is a sample code when all parameters are specified:

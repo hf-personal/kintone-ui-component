@@ -8,7 +8,7 @@ sidebar_label: MobileText
 
 MobileText は、単一行のテキストを表示します。
 
-import { MobileTextComponent } from "@site/static/js/samples/mobile/text.js"
+import { MobileTextComponent } from "@site/static/js/samples/mobile/text.jsx"
 
 <MobileTextComponent />
 
@@ -53,7 +53,7 @@ MobileText(options)<br/>
 #### Parameter
 | Name | Type | Default | Description | Remark |
 | :--- | :--- | :--- | :--- | :--- |
-| options  | object | {} | コンポーネントのプロパティを含むオブジェクト | |
+| options  | object | \{\} | コンポーネントのプロパティを含むオブジェクト | |
 
 ---
 ## Sample Code

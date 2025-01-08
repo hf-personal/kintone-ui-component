@@ -7,7 +7,10 @@ export const MOBILE_RADIO_BUTTON_CSS = `
       "ヒラギノ角ゴ ProN W3", "ＭＳ Ｐゴシック", "Lucida Grande",
       "Lucida Sans Unicode", Arial, Verdana, sans-serif;
   }
-
+  kuc-mobile-radio-button:lang(es),
+  kuc-mobile-radio-button:lang(es) * {
+    font-family: sans-serif;
+  }
   kuc-mobile-radio-button:lang(zh) ,
   kuc-mobile-radio-button:lang(zh) * {
     font-family: "微软雅黑", "Microsoft YaHei", "新宋体", NSimSun, STHeiti,
@@ -107,12 +110,23 @@ export const MOBILE_RADIO_BUTTON_CSS = `
     padding-left: 35px;
   }
 
-  .kuc-mobile-radio-button__group__select-menu[disabled] {
+  .kuc-mobile-radio-button__group__select-menu[disabled], 
+  .kuc-mobile-radio-button__group__select-menu__item--disabled {
     background-color: #d5d7d9;
     color: #999999;
     -webkit-text-fill-color: #999999;
     background-color: #d5d7d9;
     opacity: 1;
+  }
+  .kuc-mobile-radio-button__group__select-menu[bordervisible]
+  .kuc-mobile-radio-button__group__select-menu__item--disabled:last-child {
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+  }
+  .kuc-mobile-radio-button__group__select-menu[bordervisible]
+  .kuc-mobile-radio-button__group__select-menu__item--disabled:first-child {
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
   }
 
   .kuc-mobile-radio-button__group__select-menu__item__label {
