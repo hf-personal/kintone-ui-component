@@ -58,12 +58,19 @@ jobs:
           fi
 
       - name: Update LICENSE in repository
-        if: env.LICENSE_changed == 'true'
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add LICENSE
-          git commit -m "Update LICENSE file"
-          git push origin HEAD:$GITHUB_HEAD_REF
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git checkout -b update-license-$(date +%Y%m%d-%H%M%S)
+            git add LICENSE
+            git commit -m "Update LICENSE file"
+            git push origin HEAD
+  
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ github.token }}
+          title: 'Update LICENSE file'
+          branch: update-license-${{ github.run_number }}
+          base: develop-fork
+          delete-branch: true
